@@ -18,17 +18,6 @@
   },
   "capabilities": {
     "agents": "./agents",
-    "commands": [
-      {
-        "name": "crispy",
-        "description": "Start the 8-phase implementation pipeline",
-        "parameters": {
-          "intent": { "type": "string", "description": "What to build" }
-        }
-      },
-      { "name": "approve-design", "description": "Approve design and proceed" },
-      { "name": "crispy-status", "description": "Show current progress" },
-      { "name": "crispy-resume", "description": "Resume from last state" }
-    ]
+    "skills": "./skills"
   }
 }
