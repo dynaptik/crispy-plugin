@@ -1,0 +1,29 @@
+# --- Dependencies ---
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# --- TypeScript / Build ---
+# We EXCLUDE dist/ from the ignore because it is required for 
+# VS Code Agent discovery when installing via GitHub.
+# If you decide to use a build-on-install flow later, 
+# you can add dist/ back here.
+
+# --- CRISPY Internal State ---
+# Do NOT sync the actual vertical slice data or active worktrees
+.crispy/
+.crispy-worktree/
+
+# --- Environment & OS ---
+.env
+.DS_Store
+Thumbs.db
+
+# --- VS Code ---
+.vscode/
+# Keep .vscode/extensions.json if you want to recommend plugins
+!.vscode/extensions.json
+
+# --- Others ---
+.idea/
+*.swp

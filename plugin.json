@@ -1,0 +1,34 @@
+{
+  "id": "crispy-enforcer",
+  "name": "CRISPY Orchestrator",
+  "version": "0.1.0",
+  "description": "Vertical slice enforcement and context firewalls for QRSPI development.",
+  "author": {
+    "name": "Danijel Milicevic",
+    "url": "https://github.com/dynaptik/crispy-plugin"
+  },
+  "icon": "⚡",
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "entryPoints": {
+    "mcp": "./mcp.json",
+    "hooks": "./hooks.json",
+    "workflow": "./dist/index.js"
+  },
+  "capabilities": {
+    "agents": "./agents",
+    "commands": [
+      {
+        "name": "crispy",
+        "description": "Start the 8-phase implementation pipeline",
+        "parameters": {
+          "intent": { "type": "string", "description": "What to build" }
+        }
+      },
+      { "name": "approve-design", "description": "Approve design and proceed" },
+      { "name": "crispy-status", "description": "Show current progress" },
+      { "name": "crispy-resume", "description": "Resume from last state" }
+    ]
+  }
+}

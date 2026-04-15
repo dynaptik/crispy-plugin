@@ -1,0 +1,14 @@
+{
+  "mcpServers": [
+    {
+      "name": "crispy-enforcer",
+      "command": "node",
+      "args": ["./dist/mcp-server/index.js"],
+      "description": "Enforces CRISPY vertical slicing and context firewalls",
+      "capabilities": {
+        "resources": true,
+        "tools": true
+      }
+    }
+  ]
+}
