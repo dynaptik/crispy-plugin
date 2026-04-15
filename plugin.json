@@ -18,6 +18,12 @@
   },
   "capabilities": {
     "agents": "./agents",
-    "skills": "./skills"
+    "skills": "./skills",
+    "commands": [
+      { "name": "crispy", "skill": "crispy" },
+      { "name": "approve-design", "skill": "approve-design" },
+      { "name": "crispy-status", "skill": "crispy-status" },
+      { "name": "crispy-resume", "skill": "crispy-resume" }
+    ]
   }
 }
