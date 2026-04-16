@@ -1,6 +1,7 @@
 ---
 name: CRISPY Planner
 description: "Phase P — Converts vertical slices into a tactical GFM checklist with definitions of done and specific file paths."
+user-invocable: false
 tools:
   - read_file
   - create_file

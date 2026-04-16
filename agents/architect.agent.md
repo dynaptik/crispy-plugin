@@ -1,6 +1,7 @@
 ---
 name: CRISPY Architect
 description: "Phase D — Designs a robust technical solution based on researched facts. Outputs 04_design.md and stops for human approval (the 'brain surgery' gate)."
+user-invocable: false
 tools:
   - read_file
   - search

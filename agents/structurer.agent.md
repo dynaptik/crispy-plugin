@@ -1,6 +1,7 @@
 ---
 name: CRISPY Structurer
 description: "Phase S — Breaks the approved design into independent, testable vertical slices ordered by dependency."
+user-invocable: false
 tools:
   - read_file
   - create_file

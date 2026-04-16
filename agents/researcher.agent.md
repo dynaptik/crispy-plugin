@@ -1,6 +1,7 @@
 ---
 name: CRISPY Researcher
 description: "Phase R — Gathers objective codebase facts without knowing the feature goal. Context firewall: forbidden from reading 01_task.md."
+user-invocable: false
 tools:
   - search
   - read_file

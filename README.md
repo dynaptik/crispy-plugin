@@ -37,41 +37,42 @@ No build step required. The plugin is pure markdown and JSON.
 ```bash
 # Option A: Install from source via VS Code Command Palette
 # Run "Chat: Install Plugin From Source" and enter:
-https://github.com/dynaptik/crispy-plugin
+https://github.com/dynaptik/crispy
 
 # Option B: Clone locally and register via settings
-git clone https://github.com/dynaptik/crispy-plugin
+git clone https://github.com/dynaptik/crispy
 ```
 
 If cloned locally, add it to your VS Code settings:
 ```jsonc
 // settings.json
 "chat.pluginLocations": {
-    "/path/to/crispy-plugin": true
+    "/path/to/crispy": true
 }
 ```
 
 ## Usage
 
-Start the pipeline with the `/crispy-start` skill:
+Start the pipeline with the `/crispy:start` skill:
 
 ```
-/crispy-start "Implement rate limiting for the /v1/auth endpoint"
+/crispy:start "Implement rate limiting for the /v1/auth endpoint"
 ```
 
 ### Skills
-* `/crispy-start`: Begin the QRSPI pipeline with a feature description
-* `/crispy-approve`: Approve the design and proceed to structuring, planning, and implementation
-* `/crispy-status`: View current phase and artifact completion
-* `/crispy-resume`: Pick up from the last validated checkpoint
+* `/crispy:start`: Begin the QRSPI pipeline with a feature description
+* `/crispy:status`: View current phase and artifact completion
+* `/crispy:resume`: Pick up from the last validated checkpoint, or manually approve the design
 
 ### Agents
 
 The plugin provides 6 specialized agents that form the handoff chain:
 
-**Questioner** → **Researcher** → **Architect** → *(human gate: `/crispy-approve`)* → **Structurer** → **Planner** → **Builder**
+**Questioner** → **Researcher** → **Architect** → *(human gate: click "Approve Design" button)* → **Structurer** → **Planner** → **Builder**
 
 Each agent has restricted tool access and a scoped instruction budget. The Researcher is explicitly forbidden from reading `01_task.md` (context firewall). The Builder exits after one slice (context flushing).
+
+When the Architect finishes, a clickable **"Approve Design"** button appears in chat. If the button is no longer visible (e.g., session was closed), use `/crispy:resume` instead.
 
 ## CRISPY Project Tree
 

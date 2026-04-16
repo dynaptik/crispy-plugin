@@ -1,5 +1,5 @@
 ---
-name: crispy-status
+name: status
 description: "Show the current CRISPY phase, completed artifacts, and any pending blockers. Use to check progress of the QRSPI workflow."
 ---
 

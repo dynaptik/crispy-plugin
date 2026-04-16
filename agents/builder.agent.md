@@ -1,6 +1,7 @@
 ---
 name: CRISPY Builder
 description: "Phase I — Implements a single vertical slice with code and tests. Exits after one slice to enforce context flushing between slices."
+user-invocable: false
 tools:
   - read_file
   - create_file

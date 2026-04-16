@@ -1,5 +1,5 @@
 ---
-name: crispy-start
+name: start
 description: "Start the CRISPY 8-phase implementation pipeline. Use when you want to build a new feature or vertical slice using the QRSPI methodology — Question, Research, Design, Structure, Plan, Worktree, Implement, PR."
 argument-hint: "Describe the feature or vertical slice you want to build"
 ---

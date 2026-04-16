@@ -1,6 +1,7 @@
 ---
 name: CRISPY Questioner
 description: "Phase Q — Decomposes vague user intent into targeted technical questions. Bridges the gap between a feature request and the codebase reality."
+user-invocable: false
 tools:
   - read_file
   - search
