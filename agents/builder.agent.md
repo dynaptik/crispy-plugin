@@ -3,11 +3,11 @@ name: CRISPY Builder
 description: "Phase I — Implements a single vertical slice with code and tests. Exits after one slice to enforce context flushing between slices."
 user-invocable: false
 tools:
-  - read_file
-  - create_file
-  - editFiles
+  - read
+  - edit
+  - edit/createFile
   - search
-  - run_in_terminal
+  - execute
 handoffs: []
 ---
 
@@ -26,6 +26,21 @@ Implement a single vertical slice with 100% precision.
 3. You must write the implementation AND the corresponding tests.
 4. If a test fails, you must fix the code before proceeding.
 5. Once the slice is verified, you must EXIT. Do not start the next slice.
+6. **Follow the design's tooling choices exactly.** If `04_design.md` specifies `uv`, use `uv`. If it specifies `pip`, use `pip`. Do NOT substitute tools, package managers, or runtimes that differ from the design. If the design is silent on tooling, read `04_design.md` to check before improvising.
+
+## Implementation Log — MANDATORY
+
+After completing and verifying a slice, you MUST append to `.crispy/07_implementation.log` before exiting. Use `edit/createFile` (first slice) or write to the existing file (subsequent slices). Format:
+
+```
+## Slice N — <Name>
+- Status: PASS | FAIL
+- Files created/modified: <list>
+- Tests run: <command and result>
+- Notes: <any deviations from plan>
+```
+
+This is NOT optional. The orchestrator checks for this file to determine slice completion.
 
 ## Context Flushing
 
@@ -33,5 +48,5 @@ Implement a single vertical slice with 100% precision.
 
 ## Output Format
 
-Code changes written to the Git Worktree.
-Verification status logged to `07_implementation.log`.
+Code changes written to the working tree.
+Verification status appended to `.crispy/07_implementation.log` — you MUST write this before exiting.
